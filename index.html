@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/datatables.bootstrap5.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Set Water</title>
+  </head>
+  <body>
+    <!-- Navbar Starts -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <!-- OffCanvas Trigger -->
+        <button
+          class="navbar-toggler me-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- OffCanvas Trigger -->
+
+        <a class="navbar-brand fw-bold text-uppercase me-auto" href="#"
+          >SetWater</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex ms-auto">
+            <div class="input-group my-3 my-lg-0">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search"
+                aria-label="Search"
+                aria-describedby="button-addon2"
+              />
+              <button class="btn btn-primary" type="button" id="button-addon2">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-fill"></i>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdown"
+              >
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Ends -->
+
+    <!-- Offcanvas starts -->
+    <div
+      class="offcanvas offcanvas-start bg-dark text-white sidebar-nav"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-body p-0">
+        <nav class="navbar-dark">
+          <ul class="navbar-nav">
+            <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                <span> Dashboard </span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <!-- Task Report Starts -->
+            <li>
+              <a
+                class="nav-link px-3 sidebar-link"
+                data-bs-toggle="collapse"
+                href="#collapseExample"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <span class="me-2"><i class="fas fa-tasks"></i></span>
+                <span> Task Report </span>
+                <span class="right-icon ms-auto"
+                  ><i class="bi bi-chevron-down"></i
+                ></span>
+              </a>
+
+              <div class="collapse" id="collapseExample">
+                <div>
+                  <ul class="navbar-nav ps-3">
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"><i class="fas fa-tasks"></i></span>
+                        <span>By Surveryor </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"><i class="fas fa-tasks"></i></span>
+                        <span>By Date </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"><i class="fas fa-tasks"></i></span>
+                        <span>By District </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"><i class="fas fa-tasks"></i></span>
+                        <span>By Block </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"><i class="fas fa-tasks"></i></span>
+                        <span>By Bio Matrix </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"><i class="fas fa-tasks"></i></span>
+                        <span>By RO </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"><i class="fas fa-tasks"></i></span>
+                        <span>By RO-Bio Matrix </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Task Report Ends -->
+
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <!-- New Registraion Starts -->
+
+            <li>
+              <a
+                class="nav-link px-3 sidebar-link"
+                data-bs-toggle="collapse"
+                href="#newRegistraion"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <span class="me-2"><i class="fas fa-registered"></i></span>
+                <span> New Registration </span>
+                <span class="right-icon ms-auto"
+                  ><i class="bi bi-chevron-down"></i
+                ></span>
+              </a>
+
+              <div class="collapse" id="newRegistraion">
+                <div>
+                  <ul class="navbar-nav ps-3">
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>Surveyor </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>BLock Coordinator </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>District Coordinator </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- New Registraion Ends -->
+
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <!-- Registration Report Starts -->
+            <li>
+              <a
+                class="nav-link px-3 sidebar-link"
+                data-bs-toggle="collapse"
+                href="#RegistrationReport"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <span class="me-2"><i class="fas fa-registered"></i></span>
+                <span>Registration Report </span>
+                <span class="right-icon ms-auto"
+                  ><i class="bi bi-chevron-down"></i
+                ></span>
+              </a>
+
+              <div class="collapse" id="RegistrationReport">
+                <div>
+                  <ul class="navbar-nav ps-3">
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>Surveyor </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>District Coodinator Report </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>Block Coordinator Report </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Registration Report Ends -->
+
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <!-- Registration Modify Starts -->
+            <li>
+              <a
+                class="nav-link px-3 sidebar-link"
+                data-bs-toggle="collapse"
+                href="#RegistrationModify"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <span class="me-2"><i class="fas fa-registered"></i></span>
+                <span>Registration Modify </span>
+                <span class="right-icon ms-auto"
+                  ><i class="bi bi-chevron-down"></i
+                ></span>
+              </a>
+
+              <div class="collapse" id="RegistrationModify">
+                <div>
+                  <ul class="navbar-nav ps-3">
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>Surveyor </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>Block Coordinator Report </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>District Coodinator Report </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Registration Modify Ends -->
+
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+
+            <!-- Password Modify Starts -->
+            <li>
+              <a
+                class="nav-link px-3 sidebar-link"
+                data-bs-toggle="collapse"
+                href="#PasswordModify"
+                role="button"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                <span class="me-2"><i class="fas fa-registered"></i></span>
+                <span>Password Modify </span>
+                <span class="right-icon ms-auto"
+                  ><i class="bi bi-chevron-down"></i
+                ></span>
+              </a>
+
+              <div class="collapse" id="PasswordModify">
+                <div>
+                  <ul class="navbar-nav ps-3">
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>Admin Password </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>Block Coordinator Password </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>District Coodinator Password </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" class="nav-link px-3">
+                        <span class="me-2"
+                          ><i class="fas fa-registered"></i
+                        ></span>
+                        <span>Surveyor Password </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- Password Modify Ends -->
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Offcanvas Ends -->
+
+    <!-- Main Starts -->
+    <main class="mt-5 pt-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 fw-bold fs-3">DashBoard</div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <div class="card text-white bg-primary mb-3 h-100">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Primary card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card text-white bg-danger mb-3 h-100">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Primary card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card text-white bg-info mb-3 h-100">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Primary card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card text-white bg-success mb-3 h-100">
+              <div class="card-header">Header</div>
+              <div class="card-body">
+                <h5 class="card-title">Primary card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">Charts</div>
+              <div class="card-body">
+                <canvas class="chart" id="myChart" width="400" height="200">
+                </canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">Charts</div>
+              <div class="card-body">
+                <canvas class="chart" id="ourChart" width="400" height="200">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Main Ends -->
+    <!-- javascript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"
+      integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
